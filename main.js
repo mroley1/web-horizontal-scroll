@@ -34,7 +34,7 @@ function handleScroll(e) {
     let activeSection = {id: null, start: 0, end: actionSectionBarriers[1].start};
     let interPosition = 0;
     for (var i = 0; i < actionSectionBarriers.length; i++) {
-        if (position > actionSectionBarriers[i].start && position < actionSectionBarriers[i].end) {
+        if (position > actionSectionBarriers[i].start) {
             activeSection = actionSectionBarriers[i]
             interPosition = position - actionSectionBarriers[i].start;
         }
