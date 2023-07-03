@@ -1,0 +1,51 @@
+
+@font-face {
+    font-family: Pacifico;
+    src: url(./fonts/Pacifico-Regular.ttf);
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-size: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+#scrollBox {
+    background-image: linear-gradient(#010219, #1a2c73);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#moonSpacer {
+    height: 20vw;
+}
+
+#moon {
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    width: 80vw;
+    aspect-ratio: 1;
+    left: 10%;
+    position: relative;
+    transform: translateY(-60vw) rotate(5deg);
+}
+
+.crater {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    left: 10%;
+    position: absolute;
+}
+
+.title {
+    color: goldenrod;
+    font-family: Pacifico;
+    font-size: 20vw;
+    text-align: center;
+    width: 100%;
+}
