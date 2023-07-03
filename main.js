@@ -22,13 +22,24 @@ function resizeHandler() {
 }
 window.onresize = resizeHandler;
 
+function horizScroll(activeSection, position, interPosition) {
+    console.log(activeSection.start + " " + activeSection.end + " " + position);
+    document.getElementById("debug").innerHTML = activeSection.id
+    document.getElementById("debug").style.transform = "translateX(" + interPosition/3 + "px)";
+}
+
+
 function handleScroll(e) {
     let position = document.querySelector("#scrollBox").scrollTop;
+    let activeSection = {id: null, start: 0, end: actionSectionBarriers[1].start};
+    let interPosition = 0;
     for (var i = 0; i < actionSectionBarriers.length; i++) {
         if (position > actionSectionBarriers[i].start && position < actionSectionBarriers[i].end) {
-            console.log(actionSectionBarriers[i].id);
+            activeSection = actionSectionBarriers[i]
+            interPosition = position - actionSectionBarriers[i].start;
         }
     }
+    horizScroll(activeSection, position, interPosition)
 }
 
 document.querySelector("#scrollBox").addEventListener("scroll", (e) => {handleScroll(e)});

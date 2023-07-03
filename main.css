@@ -19,6 +19,7 @@ body {
     background-image: linear-gradient(#010219, #1a2c73);
     height: 100%;
     overflow-y: scroll;
+    margin-bottom: -800px;
 }
 
 #moonSpacer {
@@ -63,6 +64,22 @@ body {
     width: 100%;
 }
 
-.acttionSection {
+#stickyViewport {
+    position: sticky;
+    top: 0px;
+    background-color: aqua;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#actionSections {
+    width: auto;
+    position: relative;
+    top: -100vh;
+}
+
+.actionSection {
+    width: 100%;
+    height: 200vh;
     transition: all 0.3s linear;
 }
